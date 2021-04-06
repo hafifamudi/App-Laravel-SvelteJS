@@ -21,6 +21,6 @@ class Stadiums extends Model
 
     //relation
     public function clubs(){
-        return $this->hasOne('App\Models\Clubs','stadium_id');
+        return $this->hasOne('App\Models\Clubs','stadiums_id');
     }
 }

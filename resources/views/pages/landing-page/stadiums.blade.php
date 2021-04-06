@@ -31,60 +31,35 @@
                             </thead>
 
                             <tbody class="bg-white divide-y divide-gray-200">
-
+                                @foreach ($stadiums as $item)
                                 <tr>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <div class="flex items-center">
                                             <div class="flex-shrink-0 h-10 w-10">
-                                                <img class="h-10 w-10 rounded-full" src="https://resources.premierleague.com/premierleague/badges/t8.svg" alt="">
+                                                <img class="h-10 w-10 rounded-full" src="{{ $item->clubs->logo ?? '' }}" alt="">
                                             </div>
                                             <div class="ml-4">
                                                 <div class="text-sm font-medium text-gray-900">
-                                                    Stamford Bridge
+                                                    {{ $item->name ?? '' }}
                                                 </div>
                                                 <div class="text-sm text-gray-500">
-                                                    40,853
+                                                    {{ $item->capacity ?? '' }}
                                                 </div>
                                             </div>
                                         </div>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        Chelsea FC
+                                        {{ $item->clubs->name ?? '' }}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        Stamford Bridge, Fulham Road, London, SW6 1HS
+                                        {{ $item->address ?? '' }}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                         <a href="#" class="text-indigo-600 hover:text-indigo-900">Detail</a>
                                     </td>
                                 </tr>
-
-                                <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap">
-                                        <div class="flex items-center">
-                                            <div class="flex-shrink-0 h-10 w-10">
-                                                <img class="h-10 w-10 rounded-full" src="https://resources.premierleague.com/premierleague/badges/t3.svg" alt="">
-                                            </div>
-                                            <div class="ml-4">
-                                                <div class="text-sm font-medium text-gray-900">
-                                                    Emirates Stadium
-                                                </div>
-                                                <div class="text-sm text-gray-500">
-                                                    60,260
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap">
-                                        Arsenal
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap">
-                                        Highbury House, 75 Drayton Park, London, N5 1BU
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Detail</a>
-                                    </td>
-                                </tr>
+                                @endforeach
+                             
                 
                             <!-- More items... -->
                             </tbody>

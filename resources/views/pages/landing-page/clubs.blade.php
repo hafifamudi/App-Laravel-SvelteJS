@@ -58,14 +58,14 @@
                                             <td class="px-6 py-4 whitespace-nowrap">
                                                 <div class="flex items-center">
                                                     <div class="flex-shrink-0 h-10 w-10">
-                                                        <img class="h-10 w-10 rounded-full" src="https://resources.premierleague.com/premierleague/badges/t43.svg" alt="">
+                                                        <img class="h-10 w-10 rounded-full" src="{{ $club->match_rivals->rivals->logo}}" alt="">
                                                     </div>
                                                     <div class="ml-4">
                                                         <div class="text-sm font-medium text-gray-900">
-                                                            Manchester City
+                                                            {{ $club->match_rivals->rivals->name}}
                                                         </div>
                                                         <div class="text-sm text-gray-500">
-                                                            www.mancity.com
+                                                            {{ $club->match_rivals->rivals->url }}
                                                         </div>
                                                     </div>
                                                 </div>
